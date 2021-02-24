@@ -1,0 +1,36 @@
+﻿------ Build started: Project: PowerSuply, Configuration: Debug AVR ------
+Build started.
+Project "PowerSuply.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Compiler.targets" from project "G:\SETUP\YandexDisk\Data\_Soft for AVR_\Power Supply\DP30v5a\Firmware\PowerSuply\PowerSuply\PowerSuply.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils
+		C:\Program Files (x86)\Atmel\Atmel Studio 6.2\shellUtils\make.exe all 
+		Building file: .././PowerSuply.c
+		Invoking: AVR/GNU C Compiler : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8a -c -std=gnu99 -MD -MP -MF "PowerSuply.d" -MT"PowerSuply.d" -MT"PowerSuply.o"   -o "PowerSuply.o" ".././PowerSuply.c" 
+		Finished building: .././PowerSuply.c
+		Building target: PowerSuply.elf
+		Invoking: AVR/GNU Linker : 4.8.1
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-gcc.exe" -o PowerSuply.elf  CFile1.o PowerSuply.o   -Wl,-Map="PowerSuply.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega8a  
+		Finished building target: PowerSuply.elf
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "PowerSuply.elf" "PowerSuply.hex"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "PowerSuply.elf" "PowerSuply.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "PowerSuply.elf" > "PowerSuply.lss"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "PowerSuply.elf" "PowerSuply.srec"
+		"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-size.exe" "PowerSuply.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    754	     12	     10	    776	    308	PowerSuply.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	766 bytes   9,4 % Full
+				Data Memory Usage 		:	22 bytes   2,1 % Full
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "PowerSuply.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Atmel Studio 6.2\Vs\Avr.common.targets" from project "G:\SETUP\YandexDisk\Data\_Soft for AVR_\Power Supply\DP30v5a\Firmware\PowerSuply\PowerSuply\PowerSuply.cproj" (entry point):
+Done building target "Build" in project "PowerSuply.cproj".
+Done building project "PowerSuply.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
